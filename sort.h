@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include "sort.h"
+#include <stdlib.h>
 
 
 /**
@@ -23,9 +24,11 @@ typedef struct listint_s
 void print_list(const listint_t *list);
 void print_array(const int *array, size_t size);
 
-void merge_sort(int *array, size_t size);
-
-
-
+void heap_sort(int *array, size_t size);
+void sift_down(int *array, size_t start, size_t end, size_t size);
+void make_heap(int *array, size_t size);
+void radix_sort(int *array, size_t size);
+unsigned int pow_10(unsigned int powten);
+unsigned int count_sort(int *array, size_t size, unsigned int sort);
 
 #endif
